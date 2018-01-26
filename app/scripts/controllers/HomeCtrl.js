@@ -1,8 +1,8 @@
 (function() {
-  function HomeCtrl() {
+  function HomeCtrl(Trails) {
   }
 
   angular
     .module('sloHiker')
-    .controller('HomeCtrl', [HomeCtrl]);
+    .controller('HomeCtrl', ['Trails', HomeCtrl]);
 })();

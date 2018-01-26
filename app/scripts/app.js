@@ -11,6 +11,12 @@
         url: '/',
         controller: 'HomeCtrl as home',
         templateUrl: '/templates/home.html'
+    })
+      .state('trail', {
+        //url: '/trails/:trailId',
+        url: '/trails',
+        controller: 'TrailCtrl as trailmain',
+        templateUrl: '/templates/trail.html'
       });
   }
 
