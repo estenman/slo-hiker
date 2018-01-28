@@ -109,16 +109,39 @@
       dogs: 'Yes'
     };
 
-    Trails.getTrail = function() {
-      return felsmanLoopTrail
+    var bishopPeakTrail = {
+      trailName: 'Bishop Peak',
+      length: '3.4 miles',
+      elevation: '950 ft',
+      pro: 'It offers a great view at the end and you get the bonus of seeing some rock climbers along the way if you are interested. It is also a great leg workout since most of the trail is like a stairstepper on uneven rocks',
+      con: "It is narrow and crowded so there is a lot of starting and stopping. Also, if you have knees that protest with a lot of stairs you aren't going to feel so good by the end.",
+      timeToHike: '1 hr 20 minutes',
+      difficulty: 'moderate-strenuous',
+      loop: 'No',
+      crowd: 'It is generally crowded and you since the trail is narrow you often need to wait or be waited on to pass.',
+      parking: 'At the Highland entrance it is free street parking but limited and you often have to park a long way down the hill.',
+      bathrooms: 'No',
+      trailPhoto: '/assets/images/trail_pics/bishop_peak.jpg',
+      trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
+      fees: 'None',
+      dogs: 'Yes'
     };
-/*
-      Trails.getTrail = function(trailId) {
-        if (trailID == felsmanlooptrail) {
-          return felsmanLoopTrail;
-        }
-      };
-*/
+
+    var allTrails = {
+      cerroSanLuis: cerroSanLuisTrail,
+      mariposaKing: irishHillsMariposaKingTrail,
+      froomCreek: irishHillsFroomCreekTrail,
+      islayHill: islayHillTrail,
+      polyCanyon: polyCanyonTrail,
+      felsman: felsmanLoopTrail,
+      bishopPeak: bishopPeakTrail,
+    };
+//Retrieves trail to display based on url passed parameter
+    Trails.getTrail = function(trailId, trails) {
+      trails = allTrails;
+      return trails[trailId]
+    }
+
     return Trails;
   }
 

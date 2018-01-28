@@ -1,10 +1,10 @@
 (function() {
-  function TrailCtrl(Trails) {
-    this.trailData = Trails.getTrail();
-    //this.showTrail = Trails.getTrail($stateParams.trailId);
+  function TrailCtrl(Trails, $stateParams, $state) {
+    var trailBeingPassed = $stateParams.trailId;
+    this.trailData = Trails.getTrail(trailBeingPassed);
   }
 
   angular
     .module('sloHiker')
-    .controller('TrailCtrl', ['Trails', TrailCtrl]);
+    .controller('TrailCtrl', ['Trails', '$stateParams', '$state', TrailCtrl]);
 })();
