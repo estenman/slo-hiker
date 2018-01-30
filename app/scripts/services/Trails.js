@@ -16,7 +16,8 @@
       bathrooms: 'No',
       trailPhoto: '/assets/images/trail_pics/cerro_san_luis.jpg',
       trailMapUrl: '',
-      fees: 'None'
+      fees: 'None',
+      trailHeadAddress: '35.2748481,-120.6767364'
     };
 
     var irishHillsMariposaKingTrail = {
@@ -34,7 +35,8 @@
       trailPhoto: '/assets/images/trail_pics/irish_mariposa_king.jpg',
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/irishhillsweb.pdf',
       fees: 'None',
-      dogs: 'Yes'
+      dogs: 'Yes',
+      trailHeadAddress: '35.254311,-120.69525'
     };
 
     var irishHillsFroomCreekTrail = {
@@ -52,7 +54,8 @@
       trailPhoto: '/assets/images/trail_pics/irish_froom_creek.jpg',
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/irishhillsweb.pdf',
       fees: 'None',
-      dogs: 'Yes'
+      dogs: 'Yes',
+      trailHeadAddress: '35.254311,-120.69525'
     };
 
     var islayHillTrail = {
@@ -70,7 +73,8 @@
       trailPhoto: '/assets/images/trail_pics/islay_hill.jpg',
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/islayhill.pdf',
       fees: 'None',
-      dogs: 'yes'
+      dogs: 'yes',
+      trailHeadAddress: '35.243296, -120.62713'
     };
 
     var polyCanyonTrail = {
@@ -88,7 +92,8 @@
       trailPhoto: '/assets/images/trail_pics/poly_canyon.jpg',
       trailMapUrl: '',
       fees: 'None',
-      dogs: 'Yes'
+      dogs: 'Yes',
+      trailHeadAddress: '35.30445, -120.65845'
     };
 
     var felsmanLoopTrail = {
@@ -106,7 +111,8 @@
       trailPhoto: '/assets/images/trail_pics/felsman_loop.jpg',
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
       fees: 'None',
-      dogs: 'Yes'
+      dogs: 'Yes',
+      trailHeadAddress: '35.30433, -120.685438'
     };
 
     var bishopPeakTrail = {
@@ -124,7 +130,8 @@
       trailPhoto: '/assets/images/trail_pics/bishop_peak.jpg',
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
       fees: 'None',
-      dogs: 'Yes'
+      dogs: 'Yes',
+      trailHeadAddress: '35.2632832,-120.6951936'
     };
 
     var allTrails = {

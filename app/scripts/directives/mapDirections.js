@@ -1,7 +1,5 @@
 (function (){
   function mapDirections() {
-
-
     return {
       templateUrl: '/templates/directives/map_directions.html',
       replace: true,
