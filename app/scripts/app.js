@@ -23,5 +23,5 @@
 
   angular
     .module('sloHiker', ['ui.router'])
-    .config(config);
+    .config(config)
 })();
