@@ -1,26 +1,3 @@
 <h1>Home Page</h1>
 <a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a>
-<!--
-<div ng-controller="MapWithMarkersCtrl">
-  <div>
-    <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
-            gm-zoom="zoom" gm-map-options="options.map" class="map">
-
-      <gm-markers gm-objects="volcanoes"
-                  gm-id="object.id"
-                  gm-position="{lat: object.location.lat, lng: object.location.lng}"
-                  gm-marker-options="getVolcanoOpts(object)"
-                  gm-on-click="selectVolcano(object, marker)">
-      </gm-markers>
-
-    </gm-map>
-  </div>
-  <div>
-    <h5 class="muted" ng-show="!volcano">Select a marker!</h5>
-    <div ng-show="volcano">
-      <h5>{{ volcano.name }}, {{ volcano.elevationMeters }}m</h5>
-      <img class="volcano img-rounded" ng-src="{{ volcano.img }}"></img>
-    </div>
-  </div>
-</div>
--->
+<ng-include src="'/templates/map_with_markers.html'"></ng-include>
