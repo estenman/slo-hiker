@@ -1,5 +1,6 @@
 (function() {
   function HomeCtrl(Trails) {
+    this.trails = Trails.getAllTrails();
   }
 
   angular

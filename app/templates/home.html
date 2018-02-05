@@ -1,2 +1,13 @@
 <h1>Home Page</h1>
+<table>
+<div ng-repeat="trailx in home.trails track by $index">
+  <div>{{trailx}}</div>
+  <tr>
+    <td>{{trailx.trailName}}</td>
+    <td>{{trailx.length}}</td>
+    <td>{{trailx.timeToHike}}</td>
+    <td>{{trailx.difficulty}}</td>
+  </tr>
+</div>
+</table>
 <a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a>

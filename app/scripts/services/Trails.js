@@ -134,6 +134,7 @@
       trailHeadAddress: '35.2632832,-120.6951936'
     };
 
+//Used to match url passed parameters in the .gettrail method
     var allTrails = {
       cerroSanLuis: cerroSanLuisTrail,
       mariposaKing: irishHillsMariposaKingTrail,
@@ -143,10 +144,20 @@
       felsman: felsmanLoopTrail,
       bishopPeak: bishopPeakTrail,
     };
+
 //Retrieves trail to display based on url passed parameter
-    Trails.getTrail = function(trailId, trails) {
-      trails = allTrails;
-      return trails[trailId]
+    Trails.getTrail = function(trailId) {
+      return allTrails[trailId]
+    }
+
+//Retrieves all trails
+    Trails.getAllTrails = function() {
+      var listAllTrails = {};
+      for (const prop in allTrails){
+        console.log(allTrails[prop]);
+        listAllTrails[allTrails.prop]
+      }
+      return listAllTrails
     }
 
     return Trails;
