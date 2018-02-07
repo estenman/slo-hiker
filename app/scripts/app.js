@@ -22,6 +22,6 @@
   }
 
   angular
-    .module('sloHiker', ['ui.router'])
+    .module('sloHiker', ['ui.router', 'AngularGM'])
     .config(config);
 })();
