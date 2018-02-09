@@ -1,2 +1,16 @@
 <h1>Home Page</h1>
-<a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a>
+
+<table>
+  <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
+    <td>{{trail.trailName}}</td>
+    <td>{{trail.length}}</td>
+    <td>{{trail.timeToHike}}</td>
+    <td>{{trail.difficulty}}</td>
+  </tr>
+</table>
+
+<a href="" ng-click="home.changeFilterTo('difficulty')">Sort by difficulty</a>
+<a href="" ng-click="home.changeFilterTo('length')">Sort by length</a>
+<a href="" ng-click="home.changeFilterTo('timeToHike')">Sort by time to hike</a>
+
+<p><a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a></p>
