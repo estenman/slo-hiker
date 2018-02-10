@@ -1,0 +1,18 @@
+
+.map {
+  height: 300px;
+  max-width: 500px;
+}
+
+/*
+Fixes Bootstrap issues with Google Maps
+see http://stackoverflow.com/a/9170756
+*/
+.map img {
+  max-width: none;
+}
+
+img.trl {
+  height: 200px;
+  width: 250px;
+}

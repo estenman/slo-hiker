@@ -3,21 +3,22 @@
 
 <div>
   <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
-          gm-zoom="zoom" gm-map-options="options.map" class="map">
+          gm-zoom="zoom" gm-map-options="home.options.map" class="map">
 
-    <gm-markers gm-objects="volcanoes"
+    <gm-markers gm-objects="home.hikingTrails"
                 gm-id="object.id"
                 gm-position="{lat: object.location.lat, lng: object.location.lng}"
-                gm-marker-options="getVolcanoOpts(object)"
-                gm-on-click="selectVolcano(object, marker)">
+                gm-marker-options="home.getHikingTrailOpts(object)"
+                gm-on-click="home.selectHikingTrail(object, marker)">
     </gm-markers>
 
   </gm-map>
 </div>
+
 <div>
-  <h5 class="muted" ng-show="!volcano">Select a marker!</h5>
-  <div ng-show="volcano">
-    <h5>{{ volcano.name }}, {{ volcano.elevationMeters }}m</h5>
-    <img class="volcano img-rounded" ng-src="{{ volcano.img }}"></img>
+  <h5 class="muted" ng-show="!trl">Select a marker!</h5>
+  <div ng-show="trl">
+    <h5>{{ trl.name }}, {{ trl.elevationMeters }}m</h5>
+    <img class="trl" ng-src="{{ trl.img }}"></img>
   </div>
 </div>
