@@ -131,7 +131,7 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.2632832,-120.6951936'
+      trailHeadAddress: '35.30115, -120.68916'
     };
 
 //Used to match url passed parameters in the .gettrail method

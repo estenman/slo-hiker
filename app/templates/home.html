@@ -1,5 +1,27 @@
 <h1>Home Page</h1>
 
+<div>
+  <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
+          gm-zoom="zoom" gm-map-options="home.options.map" class="map">
+
+    <gm-markers gm-objects="home.hikingTrails"
+                gm-id="object.id"
+                gm-position="{lat: object.location.lat, lng: object.location.lng}"
+                gm-marker-options="home.getHikingTrailOpts(object)"
+                gm-on-click="home.selectHikingTrail(object, marker)">
+    </gm-markers>
+
+  </gm-map>
+</div>
+
+<div>
+  <h5 class="muted" ng-show="!trl">Select a marker!</h5>
+  <div ng-show="trl">
+    <h5>{{ trl.name }}, {{ trl.elevationMeters }}m</h5>
+    <img class="trl" ng-src="{{ trl.img }}"></img>
+  </div>
+</div>
+
 <table>
   <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
     <td>{{trail.trailName}}</td>
