@@ -17,7 +17,12 @@
       trailPhoto: '/assets/images/trail_pics/cerro_san_luis.jpg',
       trailMapUrl: '',
       fees: 'None',
-      trailHeadAddress: '35.2748481,-120.6767364'
+      id: 0,
+      img: 'http://www.thetrackerfoundation.org/Images/MountRainier_SM.jpg',
+      location: {
+        lat: 35.2748481,
+        lng: -120.6767364
+      }
     };
 
     var irishHillsMariposaKingTrail = {
@@ -36,7 +41,12 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/irishhillsweb.pdf',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.254311,-120.69525'
+      id: 1,
+      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
+      location: {
+        lat: 35.254311,
+        lng: -120.69525
+      }
     };
 
     var irishHillsFroomCreekTrail = {
@@ -55,7 +65,12 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/irishhillsweb.pdf',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.254311,-120.69525'
+      id: 2,
+      img: 'http://www.rhinoclimbs.com/Images/Glacier.9.jpg',
+      location: {
+        lat: 35.254311,
+        lng: -120.69525
+      }
     };
 
     var islayHillTrail = {
@@ -74,7 +89,12 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/islayhill.pdf',
       fees: 'None',
       dogs: 'yes',
-      trailHeadAddress: '35.243296, -120.62713'
+      id: 3,
+      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
+      location: {
+        lat: 35.243296,
+        lng: -120.62713
+      }
     };
 
     var polyCanyonTrail = {
@@ -93,7 +113,12 @@
       trailMapUrl: '',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.30445, -120.65845'
+      id: 4,
+      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
+      location: {
+        lat: 35.30445,
+        lng: -120.65845
+      }
     };
 
     var felsmanLoopTrail = {
@@ -112,7 +137,12 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.30433, -120.685438'
+      id: 5,
+      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
+      location: {
+        lat: 35.30433,
+        lng: -120.685438
+      }
     };
 
     var bishopPeakTrail = {
@@ -131,7 +161,12 @@
       trailMapUrl: 'http://gis.slocity.org/Documents/TrailMaps/bishoppeakweb.pdf',
       fees: 'None',
       dogs: 'Yes',
-      trailHeadAddress: '35.30115, -120.68916'
+      id: 6,
+      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
+      location: {
+        lat: 35.30115,
+        lng: -120.68916
+      }
     };
 
 //Used to match url passed parameters in the .gettrail method
@@ -145,6 +180,19 @@
       bishopPeak: bishopPeakTrail,
     };
 
+//Used to create array of trails to be used with angularGM module
+   var mapArray = function(){
+     var theArray = [];
+     for(var key in allTrails){
+       theArray.push(allTrails[key]);
+     }
+     return theArray;
+   }();
+
+   Trails.trailArray = function(){
+        return mapArray
+    }
+
 //Retrieves individual trail to display based on url passed parameter
     Trails.getTrail = function(trailId) {
       return allTrails[trailId]
@@ -154,7 +202,6 @@
     Trails.getAllTrails = function() {
       return allTrails
     }
-
     return Trails;
   }
 
