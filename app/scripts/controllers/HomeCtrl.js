@@ -3,6 +3,7 @@
 
 //Retrieves all trails in the Trail service
     this.trails = Trails.getAllTrails();
+    console.log(this.trails);
 
 //Used to indicate what the user selected to sort by
     this.changeFilterTo = function(item) {

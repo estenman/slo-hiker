@@ -17,6 +17,7 @@
       trailPhoto: '/assets/images/trail_pics/cerro_san_luis.jpg',
       trailMapUrl: '',
       fees: 'None',
+      dogs: 'Yes',
       id: 0,
       img: 'http://www.thetrackerfoundation.org/Images/MountRainier_SM.jpg',
       location: {

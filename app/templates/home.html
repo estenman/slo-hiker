@@ -1,40 +1,94 @@
-<h1>Home Page</h1>
+<header class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Home Page</h1>
+    </div> <!-- col -->
+  </div> <!-- row -->
+</header> <!-- container -->
 
-<div weather id="weather"></div>
+<article class="container">
+  <div class="row trail-table-row">
+    <div class="col-lg-8 offset-lg-2">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Trail Name</th>
+            <th>Miles</th>
+            <th>Time</th>
+            <th>Difficulty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
+            <td>{{trail.trailName}}</td>
+            <!--<td>{{trail}}</td>
+            <td><a ui-sref="trail({ trailId: 'cerroSanLuis'})">{{trail.trailName}}</td> -->
+            <td>{{trail.length}}</td>
+            <td>{{trail.timeToHike}}</td>
+            <td>{{trail.difficulty}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> <!-- col -->
+  </div> <!-- row -->
+  <div class="row">
+    <div class="col">
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort trails by
+          </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#" ng-click="home.changeFilterTo('difficulty')">Sort by difficulty</a>
+          <a class="dropdown-item" href="#" ng-click="home.changeFilterTo('length')">Sort by length</a>
+          <a class="dropdown-item" href="#" ng-click="home.changeFilterTo('timeToHike')">Sort by time to hike</a>
+        </div>
+      </div> <!--dropdown -->
+    </div> <!-- col -->
+    <div class="col">
+      <a href="" ng-click="home.changeFilterTo('difficulty')">Sort by difficulty</a>
+      <a href="" ng-click="home.changeFilterTo('length')">Sort by length</a>
+      <a href="" ng-click="home.changeFilterTo('timeToHike')">Sort by time to hike</a>
+    </div> <!-- col -->
+  </div> <!-- row -->
+</article> <!-- container -->
 
-<div>
-  <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
-          gm-zoom="zoom" gm-map-options="home.options.map" class="map">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
+                gm-zoom="zoom" gm-map-options="home.options.map" class="map">
 
-    <gm-markers gm-objects="home.hikingTrails"
-                gm-id="object.id"
-                gm-position="{lat: object.location.lat, lng: object.location.lng}"
-                gm-marker-options="home.getHikingTrailOpts(object)"
-                gm-on-click="home.selectHikingTrail(object, marker)">
-    </gm-markers>
+          <gm-markers gm-objects="home.hikingTrails"
+                      gm-id="object.id"
+                      gm-position="{lat: object.location.lat, lng: object.location.lng}"
+                      gm-marker-options="home.getHikingTrailOpts(object)"
+                      gm-on-click="home.selectHikingTrail(object, marker)">
+          </gm-markers>
 
-  </gm-map>
-</div>
+        </gm-map>
+      </section>
 
-<div>
-  <h5 class="muted" ng-show="!trl">Select a marker!</h5>
-  <div ng-show="trl">
-    <h5>{{ trl.trailName }}, {{ trl.elevation }}</h5>
-    <img class="trl" ng-src="{{ trl.img }}"></img>
-  </div>
-</div>
+      <section>
+        <h5 class="muted" ng-show="!trl">Select a marker!</h5>
+        <div ng-show="trl">
+          <h5>{{ trl.trailName }}, {{ trl.elevation }}</h5>
+          <img class="trl" ng-src="{{ trl.img }}"></img>
+        </div>
+      </section>
+    </div>
+    <div class="col">
+      <div weather id="weather"></div>
+    </div>
+  </div> <!-- row -->
+</div> <!-- container -->
 
-<table>
-  <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
-    <td>{{trail.trailName}}</td>
-    <td>{{trail.length}}</td>
-    <td>{{trail.timeToHike}}</td>
-    <td>{{trail.difficulty}}</td>
-  </tr>
-</table>
-
-<a href="" ng-click="home.changeFilterTo('difficulty')">Sort by difficulty</a>
-<a href="" ng-click="home.changeFilterTo('length')">Sort by length</a>
-<a href="" ng-click="home.changeFilterTo('timeToHike')">Sort by time to hike</a>
+<footer class="container">
+  <div class="row">
+    <div class="col ">
+      <h3>Footer</h3>
+    </div> <!-- col -->
+  </div> <!-- row -->
+</footer> <!-- container -->
 
 <p><a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a></p>
