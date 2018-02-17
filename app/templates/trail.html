@@ -1,3 +1,73 @@
-<h1>Trails</h1>
-<h2> {{ trailmain.trailData.trailName }}</h2>
-<map-directions></map-directions>
+<header class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{ trailmain.trailData.trailName }}</h1>
+    </div>
+  </div> <!--row -->
+</header> <!--container -->
+
+<div class="container">
+  <div class="row">
+    <section class="col-lg-8">
+      <h2>Pros</h2>
+      <p>{{ trailmain.trailData.pro }}</p>
+
+      <h2>Cons</h2>
+      <p>{{ trailmain.trailData.con }}</p>
+
+      <h2>Parking</h2>
+      <p>{{ trailmain.trailData.parking }}</p>
+
+      <h2>Directions</h2>
+      <map-directions></map-directions>
+
+      <h2>Trail Maps</h2>
+      <p><a href="{{ trailmain.trailData.trailMapUrl }}">Link to map</a></p>
+
+      <p><a href="/">Back to all trails</a></p>
+    </section>
+
+    <section class="col-lg-4">
+      <img src="{{ trailmain.trailData.trailPhoto }}" alt="View from {{ trailmain.trailData.trailName }}">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Length</td>
+            <td>{{ trailmain.trailData.length }}</td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>{{ trailmain.trailData.timeToHike }}</td>
+          </tr>
+          <tr>
+            <td>Difficulty</td>
+            <td>{{ trailmain.trailData.difficulty }}</td>
+          </tr>
+          <tr>
+            <td>Elevation</td>
+            <td>{{ trailmain.trailData.elevation }}</td>
+          </tr>
+          <tr>
+            <td>Loop</td>
+            <td>{{ trailmain.trailData.loop }}</td>
+          </tr>
+          <tr>
+            <td>Bathrooms</td>
+            <td>{{ trailmain.trailData.bathrooms }}</td>
+          </tr>
+          <tr>
+            <td>Dogs</td>
+            <td>{{ trailmain.trailData.dogs }}</td>
+          </tr>
+          <tr>
+            <td>Fees</td>
+            <td>{{ trailmain.trailData.fees }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div> <!-- row -->
+</div> <!--container -->
+
+<footer>
+</footer>
