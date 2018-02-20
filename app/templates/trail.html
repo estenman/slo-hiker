@@ -1,10 +1,10 @@
-<header class="container">
+<header class="jumbotron-fluid trail-header container-fluid">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-6 offset-lg-3 align-self-center">
       <h1>{{ trailmain.trailData.trailName }}</h1>
     </div>
-  </div> <!--row -->
-</header> <!--container -->
+  </div>
+</header>
 
 <div class="container">
   <div class="row">
@@ -28,7 +28,7 @@
     </section>
 
     <section class="col-lg-4">
-      <img src="{{ trailmain.trailData.trailPhoto }}" alt="View from {{ trailmain.trailData.trailName }}">
+      <img src="{{ trailmain.trailData.trailPhoto }}" class="img-fluid" alt="View from {{ trailmain.trailData.trailName }}">
       <table class="table">
         <tbody>
           <tr>

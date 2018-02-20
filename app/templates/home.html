@@ -1,12 +1,13 @@
-<header class="container">
+<header class="jumbotron-fluid header-image container-fluid">
   <div class="row">
-    <div class="col">
-      <h1>Home Page</h1>
-    </div> <!-- col -->
-  </div> <!-- row -->
-</header> <!-- container -->
+    <div class="header-copy col-lg-4 offset-lg-4">
+      <h1>SLO Hiker</h1>
+      <p>A quick guide to trails in San Luis Obispo</p>
+    </div>
+  </div>
+</header>
 
-<article class="container">
+<article class="container-fluid">
   <div class="row trail-table-row">
     <div class="col-lg-8 offset-lg-2">
       <table class="table table-striped">
@@ -21,8 +22,6 @@
         <tbody>
           <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
             <td>{{trail.trailName}}</td>
-            <!--<td>{{trail}}</td>
-            <td><a ui-sref="trail({ trailId: 'cerroSanLuis'})">{{trail.trailName}}</td> -->
             <td>{{trail.length}}</td>
             <td>{{trail.timeToHike}}</td>
             <td>{{trail.difficulty}}</td>
@@ -31,6 +30,9 @@
       </table>
     </div> <!-- col -->
   </div> <!-- row -->
+
+<p><a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a></p>
+
   <div class="row">
     <div class="col">
       <div class="dropdown show">
@@ -52,9 +54,9 @@
   </div> <!-- row -->
 </article> <!-- container -->
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-4 offset-lg-1">
       <section>
         <gm-map gm-map-id="'mapWithMarkers'" gm-center="center"
                 gm-zoom="zoom" gm-map-options="home.options.map" class="map">
@@ -77,18 +79,16 @@
         </div>
       </section>
     </div>
-    <div class="col">
+    <div class="col-lg-4 offset-lg-2">
       <div weather id="weather"></div>
     </div>
   </div> <!-- row -->
 </div> <!-- container -->
 
-<footer class="container">
+<footer class="container-fluid">
   <div class="row">
     <div class="col ">
       <h3>Footer</h3>
     </div> <!-- col -->
   </div> <!-- row -->
 </footer> <!-- container -->
-
-<p><a ui-sref="trail({ trailId: 'cerroSanLuis'})">Link to trails</a></p>
