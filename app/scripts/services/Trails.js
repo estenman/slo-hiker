@@ -23,7 +23,8 @@
       location: {
         lat: 35.2748481,
         lng: -120.6767364
-      }
+      },
+      keyName: 'cerroSanLuis'
     };
 
     var irishHillsMariposaKingTrail = {
@@ -47,7 +48,8 @@
       location: {
         lat: 35.254311,
         lng: -120.69525
-      }
+      },
+      keyName: 'mariposaKing'
     };
 
     var irishHillsFroomCreekTrail = {
@@ -71,7 +73,8 @@
       location: {
         lat: 35.254311,
         lng: -120.69525
-      }
+      },
+      keyName: 'froomCreek'
     };
 
     var islayHillTrail = {
@@ -95,7 +98,8 @@
       location: {
         lat: 35.243296,
         lng: -120.62713
-      }
+      },
+      keyName: 'islayHill'
     };
 
     var polyCanyonTrail = {
@@ -119,7 +123,8 @@
       location: {
         lat: 35.30445,
         lng: -120.65845
-      }
+      },
+      keyName: 'polyCanyon'
     };
 
     var felsmanLoopTrail = {
@@ -143,7 +148,8 @@
       location: {
         lat: 35.30433,
         lng: -120.685438
-      }
+      },
+      keyName: 'felsman'
     };
 
     var bishopPeakTrail = {
@@ -167,7 +173,8 @@
       location: {
         lat: 35.30115,
         lng: -120.68916
-      }
+      },
+      keyName: 'bishopPeak'
     };
 
 //Used to match url passed parameters in the .gettrail method
