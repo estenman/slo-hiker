@@ -1,9 +1,8 @@
 (function() {
-  function HomeCtrl(Trails, $rootScope, $scope) {
+  function HomeCtrl(Trails, $rootScope, $scope, $log) {
 
 //Retrieves all trails in the Trail service
     this.trails = Trails.getAllTrails();
-    console.log(this.trails);
 
 //Used to indicate what the user selected to sort by
     this.changeFilterTo = function(item) {
@@ -62,10 +61,9 @@
       $rootScope.$broadcast('gmMarkersUpdate', 'this.hikingTrails');
     };
 
-
   }
 
   angular
     .module('sloHiker')
-    .controller('HomeCtrl', ['Trails', '$rootScope', '$scope', HomeCtrl]);
+    .controller('HomeCtrl', ['Trails', '$rootScope', '$scope', '$log', HomeCtrl]);
 })();
