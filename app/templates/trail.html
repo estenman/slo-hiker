@@ -1,13 +1,29 @@
 <header class="jumbotron-fluid trail-header container-fluid">
   <div class="row">
-    <div class="col-lg-6 offset-lg-3 align-self-center">
-      <h1>{{ trailmain.trailData.trailName }}</h1>
+    <div class="col-lg-4 col-md-4">
+      <img class="img-fluid" src="../assets/images/trail_pics/mountain-graphic.png" alt-text="graphic of mountain range">
+    </div>
+    <div class="col align-self-center">
+      <h1 class="trails-trail-name">{{ trailmain.trailData.trailName }}</h1>
     </div>
   </div>
 </header>
 
 <div class="container">
   <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 bg-white pl-0">
+          <li class="breadcrumb-item"><a href='/'>All trails</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ trailmain.trailData.trailName }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- row -->
+</div>
+
+<div class="container">
+  <div class="row general-trails-section">
     <section class="col-lg-8">
       <h2>Pros</h2>
       <p>{{ trailmain.trailData.pro }}</p>
@@ -21,10 +37,10 @@
       <h2>Directions</h2>
       <map-directions></map-directions>
 
-      <h2>Trail Maps</h2>
-      <p><a href="{{ trailmain.trailData.trailMapUrl }}">Link to map</a></p>
+      <h2>Trail Map</h2>
+      <p><a href="{{ trailmain.trailData.trailMapUrl }}">Get the map</a></p>
 
-      <p><a href="/">Back to all trails</a></p>
+      <!--<p><a href="/">Back to all trails</a></p> -->
     </section>
 
     <section class="col-lg-4">
@@ -33,7 +49,7 @@
         <tbody>
           <tr>
             <td>Length</td>
-            <td>{{ trailmain.trailData.length }}</td>
+            <td>{{ trailmain.trailData.length }} miles</td>
           </tr>
           <tr>
             <td>Time</td>
@@ -69,5 +85,10 @@
   </div> <!-- row -->
 </div> <!--container -->
 
-<footer>
-</footer>
+<footer class="container-fluid footer-container">
+  <div class="row footer-trail">
+    <div class="col">
+      <p class="mb-0">Copyright&copy; Ericka Stenman 2018</p>
+    </div> <!-- col -->
+  </div> <!-- row -->
+</footer> <!-- container -->
