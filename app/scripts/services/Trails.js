@@ -19,7 +19,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 0,
-      img: 'http://www.thetrackerfoundation.org/Images/MountRainier_SM.jpg',
       location: {
         lat: 35.2748481,
         lng: -120.6767364
@@ -44,7 +43,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 1,
-      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
       location: {
         lat: 35.254311,
         lng: -120.69525
@@ -69,7 +67,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 2,
-      img: 'http://www.rhinoclimbs.com/Images/Glacier.9.jpg',
       location: {
         lat: 35.254311,
         lng: -120.69525
@@ -94,7 +91,6 @@
       fees: 'None',
       dogs: 'yes',
       id: 3,
-      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
       location: {
         lat: 35.243296,
         lng: -120.62713
@@ -119,7 +115,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 4,
-      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
       location: {
         lat: 35.30445,
         lng: -120.65845
@@ -144,7 +139,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 5,
-      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
       location: {
         lat: 35.30433,
         lng: -120.685438
@@ -169,7 +163,6 @@
       fees: 'None',
       dogs: 'Yes',
       id: 6,
-      img: 'http://www.destination360.com/north-america/us/washington/images/s/washington-mt-baker-ski.jpg',
       location: {
         lat: 35.30115,
         lng: -120.68916

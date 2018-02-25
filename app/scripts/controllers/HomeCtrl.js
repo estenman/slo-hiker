@@ -1,5 +1,5 @@
 (function() {
-  function HomeCtrl(Trails, $rootScope, $scope, $log) {
+  function HomeCtrl(Trails, $rootScope, $scope) {
 
 //Retrieves all trails in the Trail service
     this.trails = Trails.getAllTrails();
@@ -38,7 +38,7 @@
       }
     };
 
-//map trail info
+//Map trail info
     this.hikingTrails = Trails.trailArray();
 
 //Used to change the marker color when clicked on and to update indicator if it is selected.
@@ -65,5 +65,5 @@
 
   angular
     .module('sloHiker')
-    .controller('HomeCtrl', ['Trails', '$rootScope', '$scope', '$log', HomeCtrl]);
+    .controller('HomeCtrl', ['Trails', '$rootScope', '$scope', HomeCtrl]);
 })();
