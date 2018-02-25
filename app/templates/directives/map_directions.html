@@ -1,6 +1,7 @@
-<form action="http://maps.google.com/maps" method="get" target="_blank">
-   <label for="saddr">Enter your location</label>
-   <input type="text" name="saddr" />
+<form class="form-inline" action="http://maps.google.com/maps" method="get" target="_blank">
+   <label class="sr-only" for="saddr">Enter your location</label>
+   <input type="text" class="form-control mb-2 mr-sm-2" name="saddr" placeholder="Enter your location"/>
    <input type="hidden" name="daddr" value="{{ trailmain.trailData.location.lat }}, {{ trailmain.trailData.location.lng }}" />
-   <input type="submit" value="Get directions" />
+  <!-- <input type="submit" value="Get directions" /> -->
+  <button type="submit" class="btn btn-secondary mb-2">Get directions</button>
 </form>

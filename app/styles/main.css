@@ -60,3 +60,33 @@ body {
   max-height: 20px;
   margin-top: 10px;
 }
+
+.footer-trail {
+  max-height: 30px;
+  margin-top: 10px;
+}
+
+.footer-container {
+  background-color: #dee2e6;
+}
+
+.general-trails-section {
+  margin-top: 2rem;
+}
+
+.general-trails-section h2:not(:first-child) {
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .trails-trail-name {
+    margin-left: 3rem;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .trails-trail-name {
+    text-align: center;
+  }
+}
