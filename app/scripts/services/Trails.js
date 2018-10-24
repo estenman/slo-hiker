@@ -23,7 +23,7 @@
         lat: 35.2748481,
         lng: -120.6767364
       },
-      keyName: 'cerroSanLuis'
+      //keyName: 'cerroSanLuis'
     };
 
     var irishHillsMariposaKingTrail = {
@@ -47,7 +47,7 @@
         lat: 35.254311,
         lng: -120.69525
       },
-      keyName: 'mariposaKing'
+      //keyName: 'mariposaKing'
     };
 
     var irishHillsFroomCreekTrail = {
@@ -71,7 +71,7 @@
         lat: 35.254311,
         lng: -120.69525
       },
-      keyName: 'froomCreek'
+      //keyName: 'froomCreek'
     };
 
     var islayHillTrail = {
@@ -95,7 +95,7 @@
         lat: 35.243296,
         lng: -120.62713
       },
-      keyName: 'islayHill'
+      //keyName: 'islayHill'
     };
 
     var polyCanyonTrail = {
@@ -119,7 +119,7 @@
         lat: 35.30445,
         lng: -120.65845
       },
-      keyName: 'polyCanyon'
+      //keyName: 'polyCanyon'
     };
 
     var felsmanLoopTrail = {
@@ -143,7 +143,7 @@
         lat: 35.30433,
         lng: -120.685438
       },
-      keyName: 'felsman'
+      //keyName: 'felsman'
     };
 
     var bishopPeakTrail = {
@@ -167,10 +167,11 @@
         lat: 35.30115,
         lng: -120.68916
       },
-      keyName: 'bishopPeak'
+      //keyName: 'bishopPeak'
     };
 
 //Used to match url passed parameters in the .gettrail method
+    /*
     var allTrails = {
       cerroSanLuis: cerroSanLuisTrail,
       mariposaKing: irishHillsMariposaKingTrail,
@@ -180,18 +181,32 @@
       felsman: felsmanLoopTrail,
       bishopPeak: bishopPeakTrail,
     };
+    */
+    var allTrails = [
+      cerroSanLuisTrail,
+      irishHillsMariposaKingTrail,
+      irishHillsFroomCreekTrail,
+      islayHillTrail,
+      polyCanyonTrail,
+      felsmanLoopTrail,
+      bishopPeakTrail,
+    ];
 
 //Used to create array of trails to be used with angularGM module
    var mapArray = function(){
+     /*
      var theArray = [];
      for(var key in allTrails){
        theArray.push(allTrails[key]);
      }
      return theArray;
+     */
+     return allTrails;
    }();
 
    Trails.trailArray = function(){
-        return mapArray
+        //return mapArray
+        return allTrails;
     }
 
 //Retrieves individual trail to display based on url passed parameter

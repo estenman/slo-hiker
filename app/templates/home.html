@@ -21,7 +21,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="trail in home.trails | trailsort:home.getFilter()">
-            <td><a ui-sref="trail({ trailId: '{{trail.keyName}}' })">{{trail.trailName}}</td>
+            <td><a ui-sref="trail({ trailId: '{{trail.id}}' })">{{trail.trailName}}</td>
             <td>{{trail.length}}</td>
             <td>{{trail.timeToHike | timeConvert}}</td>
             <td>{{trail.difficulty}}</td>
